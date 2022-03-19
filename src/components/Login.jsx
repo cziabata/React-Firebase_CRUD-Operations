@@ -6,9 +6,9 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Login = () => {
     const {auth} = useContext(Context);
-    const login = async () => {
+    const login = () => {
         const provider = new GoogleAuthProvider();
-        await signInWithPopup(auth, provider).then((result)=>{
+        signInWithPopup(auth, provider).then((result)=>{
             const user = result.user
             console.log(user)
         });
