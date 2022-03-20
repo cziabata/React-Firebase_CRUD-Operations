@@ -8,11 +8,7 @@ const Login = () => {
     const {auth} = useContext(Context);
     const login = () => {
         const provider = new GoogleAuthProvider();
-        signInWithPopup(auth, provider).then((result)=>{
-            const user = result.user
-            console.log(user)
-        });
-        
+        signInWithPopup(auth, provider);
     }
     return(
         <>
